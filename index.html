@@ -336,7 +336,7 @@
             </p>
           </div>
           <div class="content has-text-justified" style="color: #363636;">
-            <i><b>We propose Generative Adversarial Distillation (GAD)</b></i>. The training dataset $\mathcal{T}=\{(x, y_t)\}$ is constructed by input prompts $x$ and teacher response $y_t$. The framework consists of a generator $G$ which is the student model, and a discriminator $D$. The generator generates the response $G(x)$ to the prompt $x$. The discriminator predicts a sequence-level scalar score $D([x,y])$ (denoted as $D(y)$ below for brevity) given prompt $x$ and response $y$.
+            <i><b>We propose Generative Adversarial Distillation (GAD)</b></i>. The training dataset $\mathcal{T}=\{(x, y_t)\}$ is constructed by input prompts $x$ and teacher response $y_t$. The framework consists of a generator $G$ which is the student model, and a discriminator $D$. The generator generates the response $G(x)$ to the prompt $x$. The discriminator predicts a sequence-level scalar score $D([x,y])$ (denoted as $D(y)$ below for brevity) given prompt $x$ and response $y$.<br>
             The training objective is formulated as a two-player minimax game with the following value function $\mathcal{V}(G, D)$:
             $$\max_G \min_D \ \ \mathcal{V}(G, D) = \mathbb{E}_{(x,y_t) \sim \mathcal{T}} \left[-\log \sigma\left( D(y_t) - D(G(x)) \right)\right]$$
             We split the objective into two parts:</br>
